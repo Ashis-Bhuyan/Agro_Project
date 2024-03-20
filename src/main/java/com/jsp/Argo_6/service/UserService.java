@@ -37,7 +37,7 @@ public class UserService {
 			mailMessage.setFrom("argo0624@gmail.com");
 			mailMessage.setTo(user.getEmail());
 			mailMessage.setSubject("Successfully Registered !");
-			mailMessage.setText("Thankyou For Your Registration!");
+			mailMessage.setText("Thankyou For Your Registration!" + user);
 			javaMailSender.send(mailMessage);
 			return "Registration Successfully...";
 		} catch (Exception e) {
